@@ -161,19 +161,9 @@ with package version. Their document still many confuse so we will build Draco m
 - Install Visual Studio 2019 with C++ Desktop Development.
 - Install [FBX SDK](https://www.autodesk.com/developer-network/platform-technologies/fbx-sdk-2019-2)
 version 2019.2 from Autodesk website and set installation path.
-- Install open source package from [Vcpkg](https://github.com/microsoft/vcpkg): boost,
-nlohmann-json, cppcodec, stb, fmt, nlohmann-fifo-map.
-- Open prj folder, open FBX2glTF.sln.
-- Get source of [vectorial](https://github.com/scoopr/vectorial) go to `vectorial` -> `include` and copy path, 
-paste new include directory in `Properties window` -> `Configuration Properties` -> `C/C++` -> `General`
--> `Additional Include Directories`
-- Get source of [Draco](https://github.com/google/draco) then create new folder `build`, go to folder
-then open command line `cmd`. Type `cmake .. -G "Visual Studio 16 2019 -A Win32"`. This will be
-generated Visual Studio Solution. Open `draco.sln` then choose build type (debug or release). Press build,
-wait util build completed. Go back to `draco` folder in Windows Explorer, open `Debug` or `Release` folder, copy path.
-paste new `.lib` folder in `Properties window` -> `Configuration Properties` -> `Linker` -> 
-`Additional Library Directories`.
-- Go back `FBX2glTF.sln` solution, choose `debug` or `release` build, press build.
+- Install open source package from [Vcpkg](https://github.com/microsoft/vcpkg).
+- Checkout all need submodule.
+- Open prj folder, open `FBX2glTF.sln`, choose `debug` or `release` build, press build.
 
 ## Conversion Process
 

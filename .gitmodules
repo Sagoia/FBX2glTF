@@ -1,0 +1,9 @@
+[submodule "lib/draco"]
+	path = lib/draco
+	url = https://github.com/google/draco.git
+[submodule "lib/mathfu"]
+	path = lib/mathfu
+	url = https://github.com/google/mathfu.git
+[submodule "lib/vectorial"]
+	path = lib/vectorial
+	url = https://github.com/scoopr/vectorial.git
