@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\fbx">
+      <UniqueIdentifier>{3676e74a-277a-43bb-965a-2e6ea96f97ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\fbx\materials">
+      <UniqueIdentifier>{33745190-460a-4b0d-b2d0-5acdebe682fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\fbx">
+      <UniqueIdentifier>{f5be7ec1-b6ee-424a-965b-23a4913de249}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\fbx\materials">
+      <UniqueIdentifier>{f8c16980-69bf-49ad-b66a-a30fcece6f55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gltf">
+      <UniqueIdentifier>{1a48c40a-0a17-41fb-9484-66763f00baf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gltf\properties">
+      <UniqueIdentifier>{8d8a4a0d-1fde-4ab9-8bc3-2b3145f39ff1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gltf">
+      <UniqueIdentifier>{596aaf6d-8751-487e-94c1-774809b2dcb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gltf\properties">
+      <UniqueIdentifier>{a52787eb-43f4-42ae-b586-1f34ae140297}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\raw">
+      <UniqueIdentifier>{fa1f69bc-4cce-47bb-a19d-9bbf2a836282}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\raw">
+      <UniqueIdentifier>{f29dc7da-c507-4af5-b438-13cefdf55be4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utils">
+      <UniqueIdentifier>{1261360b-b2dd-4ee9-b18f-f3b94f1ac6d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils">
+      <UniqueIdentifier>{28f24bf3-245d-4c11-bd87-1d6cd5df8013}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\fbx\materials\FbxMaterials.hpp">
+      <Filter>Header Files\fbx\materials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fbx\materials\RoughnessMetallicMaterials.hpp">
+      <Filter>Header Files\fbx\materials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fbx\materials\TraditionalMaterials.hpp">
+      <Filter>Header Files\fbx\materials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fbx\Fbx2Raw.hpp">
+      <Filter>Header Files\fbx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fbx\FbxBlendShapesAccess.hpp">
+      <Filter>Header Files\fbx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fbx\FbxLayerElementAccess.hpp">
+      <Filter>Header Files\fbx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fbx\FbxSkinningAccess.hpp">
+      <Filter>Header Files\fbx</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gltf\GltfModel.hpp">
+      <Filter>Header Files\gltf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gltf\Raw2Gltf.hpp">
+      <Filter>Header Files\gltf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gltf\TextureBuilder.hpp">
+      <Filter>Header Files\gltf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gltf\properties\AccessorData.hpp">
+      <Filter>Header Files\gltf\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gltf\properties\AnimationData.hpp">
+      <Filter>Header Files\gltf\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gltf\properties\BufferData.hpp">
+      <Filter>Header Files\gltf\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gltf\properties\BufferViewData.hpp">
+      <Filter>Header Files\gltf\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gltf\properties\CameraData.hpp">
+      <Filter>Header Files\gltf\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gltf\properties\ImageData.hpp">
+      <Filter>Header Files\gltf\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gltf\properties\LightData.hpp">
+      <Filter>Header Files\gltf\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gltf\properties\MaterialData.hpp">
+      <Filter>Header Files\gltf\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gltf\properties\MeshData.hpp">
+      <Filter>Header Files\gltf\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gltf\properties\NodeData.hpp">
+      <Filter>Header Files\gltf\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gltf\properties\PrimitiveData.hpp">
+      <Filter>Header Files\gltf\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gltf\properties\SamplerData.hpp">
+      <Filter>Header Files\gltf\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gltf\properties\SceneData.hpp">
+      <Filter>Header Files\gltf\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gltf\properties\SkinData.hpp">
+      <Filter>Header Files\gltf\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gltf\properties\TextureData.hpp">
+      <Filter>Header Files\gltf\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\FBX2glTF.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\mathfu.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\raw\RawModel.hpp">
+      <Filter>Header Files\raw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\File_Utils.hpp">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\Image_Utils.hpp">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\utils\String_Utils.hpp">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\fbx\materials\3dsMaxPhysicalMaterial.cpp">
+      <Filter>Source Files\fbx\materials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fbx\materials\FbxMaterials.cpp">
+      <Filter>Source Files\fbx\materials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fbx\materials\StingrayPBSMaterial.cpp">
+      <Filter>Source Files\fbx\materials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fbx\materials\TraditionalMaterials.cpp">
+      <Filter>Source Files\fbx\materials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fbx\Fbx2Raw.cpp">
+      <Filter>Source Files\fbx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fbx\FbxBlendShapesAccess.cpp">
+      <Filter>Source Files\fbx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fbx\FbxSkinningAccess.cpp">
+      <Filter>Source Files\fbx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gltf\properties\AccessorData.cpp">
+      <Filter>Source Files\gltf\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gltf\properties\AnimationData.cpp">
+      <Filter>Source Files\gltf\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gltf\properties\BufferData.cpp">
+      <Filter>Source Files\gltf\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gltf\properties\BufferViewData.cpp">
+      <Filter>Source Files\gltf\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gltf\properties\CameraData.cpp">
+      <Filter>Source Files\gltf\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gltf\properties\ImageData.cpp">
+      <Filter>Source Files\gltf\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gltf\properties\LightData.cpp">
+      <Filter>Source Files\gltf\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gltf\properties\MaterialData.cpp">
+      <Filter>Source Files\gltf\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gltf\properties\MeshData.cpp">
+      <Filter>Source Files\gltf\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gltf\properties\NodeData.cpp">
+      <Filter>Source Files\gltf\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gltf\properties\PrimitiveData.cpp">
+      <Filter>Source Files\gltf\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gltf\properties\SceneData.cpp">
+      <Filter>Source Files\gltf\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gltf\properties\SkinData.cpp">
+      <Filter>Source Files\gltf\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gltf\properties\TextureData.cpp">
+      <Filter>Source Files\gltf\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gltf\GltfModel.cpp">
+      <Filter>Source Files\gltf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gltf\Raw2Gltf.cpp">
+      <Filter>Source Files\gltf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gltf\TextureBuilder.cpp">
+      <Filter>Source Files\gltf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\FBX2glTF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\raw\RawModel.cpp">
+      <Filter>Source Files\raw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utils\File_Utils.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utils\Image_Utils.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

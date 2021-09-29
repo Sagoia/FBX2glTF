@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{efb00a5b-bf0e-4142-bdd0-6ca2d5d14db1}</ProjectGuid>
+    <RootNamespace>FBX2glTF</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Program Files\Autodesk\FBX\FBX SDK\2019.2\include;../src;../../mathfu/include;../third_party/CLI11;../../vectorial/include;../../fifo_map/src;../../draco/src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4703</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files\Autodesk\FBX\FBX SDK\2019.2\lib\vs2017\x86\debug;../../draco/build/Debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libfbxsdk-md.lib;libxml2-md.lib;zlib-md.lib;Advapi32.lib;draco.lib;dracodec.lib;dracoenc.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Program Files\Autodesk\FBX\FBX SDK\2019.2\include;../src;../../mathfu/include;../third_party/CLI11;../../vectorial/include;../../draco/src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4703</DisableSpecificWarnings>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files\Autodesk\FBX\FBX SDK\2019.2\lib\vs2017\x86\release;../../draco/build/Release</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libfbxsdk-md.lib;libxml2-md.lib;zlib-md.lib;Advapi32.lib;draco.lib;dracodec.lib;dracoenc.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Program Files\Autodesk\FBX\FBX SDK\2019.2\include;../src;../../mathfu/include;../third_party/CLI11;../../vectorial/include;../../fifo_map/src;../../draco/src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4703</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files\Autodesk\FBX\FBX SDK\2019.2\lib\vs2017\x64\debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libfbxsdk-md.lib;libxml2-md.lib;zlib-md.lib;Advapi32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Program Files\Autodesk\FBX\FBX SDK\2019.2\include;../src;../../mathfu/include;../third_party/CLI11;../../vectorial/include;../../fifo_map/src;../../draco/src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4703</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files\Autodesk\FBX\FBX SDK\2019.2\lib\vs2017\x64\release</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libfbxsdk-md.lib;libxml2-md.lib;zlib-md.lib;Advapi32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\FBX2glTF.h" />
+    <ClInclude Include="..\src\fbx\Fbx2Raw.hpp" />
+    <ClInclude Include="..\src\fbx\FbxBlendShapesAccess.hpp" />
+    <ClInclude Include="..\src\fbx\FbxLayerElementAccess.hpp" />
+    <ClInclude Include="..\src\fbx\FbxSkinningAccess.hpp" />
+    <ClInclude Include="..\src\fbx\materials\FbxMaterials.hpp" />
+    <ClInclude Include="..\src\fbx\materials\RoughnessMetallicMaterials.hpp" />
+    <ClInclude Include="..\src\fbx\materials\TraditionalMaterials.hpp" />
+    <ClInclude Include="..\src\gltf\GltfModel.hpp" />
+    <ClInclude Include="..\src\gltf\properties\AccessorData.hpp" />
+    <ClInclude Include="..\src\gltf\properties\AnimationData.hpp" />
+    <ClInclude Include="..\src\gltf\properties\BufferData.hpp" />
+    <ClInclude Include="..\src\gltf\properties\BufferViewData.hpp" />
+    <ClInclude Include="..\src\gltf\properties\CameraData.hpp" />
+    <ClInclude Include="..\src\gltf\properties\ImageData.hpp" />
+    <ClInclude Include="..\src\gltf\properties\LightData.hpp" />
+    <ClInclude Include="..\src\gltf\properties\MaterialData.hpp" />
+    <ClInclude Include="..\src\gltf\properties\MeshData.hpp" />
+    <ClInclude Include="..\src\gltf\properties\NodeData.hpp" />
+    <ClInclude Include="..\src\gltf\properties\PrimitiveData.hpp" />
+    <ClInclude Include="..\src\gltf\properties\SamplerData.hpp" />
+    <ClInclude Include="..\src\gltf\properties\SceneData.hpp" />
+    <ClInclude Include="..\src\gltf\properties\SkinData.hpp" />
+    <ClInclude Include="..\src\gltf\properties\TextureData.hpp" />
+    <ClInclude Include="..\src\gltf\Raw2Gltf.hpp" />
+    <ClInclude Include="..\src\gltf\TextureBuilder.hpp" />
+    <ClInclude Include="..\src\mathfu.hpp" />
+    <ClInclude Include="..\src\raw\RawModel.hpp" />
+    <ClInclude Include="..\src\utils\File_Utils.hpp" />
+    <ClInclude Include="..\src\utils\Image_Utils.hpp" />
+    <ClInclude Include="..\src\utils\String_Utils.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\FBX2glTF.cpp" />
+    <ClCompile Include="..\src\fbx\Fbx2Raw.cpp" />
+    <ClCompile Include="..\src\fbx\FbxBlendShapesAccess.cpp" />
+    <ClCompile Include="..\src\fbx\FbxSkinningAccess.cpp" />
+    <ClCompile Include="..\src\fbx\materials\3dsMaxPhysicalMaterial.cpp" />
+    <ClCompile Include="..\src\fbx\materials\FbxMaterials.cpp" />
+    <ClCompile Include="..\src\fbx\materials\StingrayPBSMaterial.cpp" />
+    <ClCompile Include="..\src\fbx\materials\TraditionalMaterials.cpp" />
+    <ClCompile Include="..\src\gltf\GltfModel.cpp" />
+    <ClCompile Include="..\src\gltf\properties\AccessorData.cpp" />
+    <ClCompile Include="..\src\gltf\properties\AnimationData.cpp" />
+    <ClCompile Include="..\src\gltf\properties\BufferData.cpp" />
+    <ClCompile Include="..\src\gltf\properties\BufferViewData.cpp" />
+    <ClCompile Include="..\src\gltf\properties\CameraData.cpp" />
+    <ClCompile Include="..\src\gltf\properties\ImageData.cpp" />
+    <ClCompile Include="..\src\gltf\properties\LightData.cpp" />
+    <ClCompile Include="..\src\gltf\properties\MaterialData.cpp" />
+    <ClCompile Include="..\src\gltf\properties\MeshData.cpp" />
+    <ClCompile Include="..\src\gltf\properties\NodeData.cpp" />
+    <ClCompile Include="..\src\gltf\properties\PrimitiveData.cpp" />
+    <ClCompile Include="..\src\gltf\properties\SceneData.cpp" />
+    <ClCompile Include="..\src\gltf\properties\SkinData.cpp" />
+    <ClCompile Include="..\src\gltf\properties\TextureData.cpp" />
+    <ClCompile Include="..\src\gltf\Raw2Gltf.cpp" />
+    <ClCompile Include="..\src\gltf\TextureBuilder.cpp" />
+    <ClCompile Include="..\src\raw\RawModel.cpp" />
+    <ClCompile Include="..\src\utils\File_Utils.cpp" />
+    <ClCompile Include="..\src\utils\Image_Utils.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

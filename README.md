@@ -7,14 +7,6 @@ venerable [FBX](https://www.autodesk.com/products/fbx/overview) format to
 [glTF 2.0](https://github.com/KhronosGroup/glTF/tree/master/specification/2.0),
 a modern runtime asset delivery format.
 
-Precompiled binaries releases for Windows, Mac OS X and Linux may be
-found [here](https://github.com/facebookincubator/FBX2glTF/releases).
-
-Bleeding-edge binaries for Windows may be found [here](https://ci.appveyor.com/project/Facebook/fbx2gltf/build/artifacts). Linux and Mac OS X to come; meanwhile, you can [build your own](#building-it-on-your-own).
-
-[![Build Status](https://travis-ci.com/facebookincubator/FBX2glTF.svg?branch=master)](https://travis-ci.com/facebookincubator/FBX2glTF)
-[![Build status](https://ci.appveyor.com/api/projects/status/5mq4vbc44vmyec4w?svg=true)](https://ci.appveyor.com/project/Facebook/fbx2gltf)
-
 ## Running
 
 The tool can be invoked like so:
@@ -135,77 +127,53 @@ Some of these switches are not obvious:
 ## Building it on your own
 
 We currently depend on the open source projects
-[Draco](https://github.com/google/draco),
-[MathFu](https://github.com/google/mathfu),
-[Json](https://github.com/nlohmann/json),
-[cppcodec](https://github.com/tplgy/cppcodec),
-[CLI11](https://github.com/CLIUtils/CLI11),
-[stb](https://github.com/nothings/stb),
-and [fmt](https://github.com/fmtlib/fmt);
-all of which are automatically downloaded and/or built.
+- [Boost](https://github.com/boostorg)
+- [Draco](https://github.com/google/draco)
+- [MathFu](https://github.com/google/mathfu)
+- [Json](https://github.com/nlohmann/json)
+- [cppcodec](https://github.com/tplgy/cppcodec)
+- [CLI11](https://github.com/CLIUtils/CLI11)
+- [stb](https://github.com/nothings/stb)
+- [fmt](https://github.com/fmtlib/fmt)
+- [fifo_map](https://github.com/nlohmann/fifo_map)
+- [vectorial](https://github.com/scoopr/vectorial)
 
-**At present, only version 2019.2 of the FBX SDK is supported**. The
-build system will not successfully locate any other version.
+**At present, only version 2019.2 of the FBX SDK is just tested**
+We can't guarantee this will work well other version SDK
 
-### Linux and MacOS X
+**At present, we just test on x86 build, but you can try x64 build your own**
 
-Your development environment will need to have:
+**At present, Autodesk just release for SDK for Visual Studio 2015 and 2017 version**
+But Microsoft [announced](https://devblogs.microsoft.com/cppblog/side-by-side-minor-version-msvc-toolsets-in-visual-studio-2017/)
+and [announced](https://devblogs.microsoft.com/cppblog/side-by-side-minor-version-msvc-toolsets-in-visual-studio-2019/),
+if toolset is set minor version number bump this mean you can build binary compatible with older with 
+same major version number. For example: VS 2015 use toolset 14.0 and 2017 is 14.1, 2019 is 14.2 can use binary together.
+But we can't use VS 2013 use toolset 12.0.
 
-- build essentials (gcc for Linux, clang for Mac)
-- cmake
-- python 3.\* and associated pip3/pip command
-- zstd
-
-Then, compilation on Unix machines will look something like:
-
-```
-# Determine SDK location & build settings for Linux vs (Recent) Mac OS X
-> if [[ "$OSTYPE" == "darwin"* ]]; then
-    export CONAN_CONFIG="-s compiler=apple-clang -s compiler.version=10.0 -s compiler.libcxx=libc++"
-    export FBXSDK_TARBALL="https://github.com/zellski/FBXSDK-Darwin/archive/2019.2.tar.gz"
-elif [[ "$OSTYPE" == "linux"* ]]; then
-    export CONAN_CONFIG="-s compiler.libcxx=libstdc++11"
-    export FBXSDK_TARBALL="https://github.com/zellski/FBXSDK-Linux/archive/2019.2.tar.gz"
-else
-    echo "This snippet only handles Mac OS X and Linux."
-fi
-
-# Fetch Project
-> git clone https://github.com/facebookincubator/FBX2glTF.git
-> cd FBX2glTF
-
-# Fetch and unpack FBX SDK
-> curl -sL "${FBXSDK_TARBALL}" | tar xz --strip-components=1 --include */sdk/
-# Then decompress the contents
-> zstd -d -r --rm sdk
-
-# Install and configure Conan, if needed
-> pip3 install conan # or sometimes just "pip"; you may need to install Python/PIP
-> conan remote add --force bincrafters https://api.bintray.com/conan/bincrafters/public-conan
-
-# Initialize & run build
-> conan install . -i build -s build_type=Release ${CONAN_CONFIG}
-> conan build . -bf build
-```
-
-If all goes well, you will end up with a statically linked executable in `./build/FBX2glTF`.
+**At present, FBX2glTF is used Draco version 1.2.5** FBX2glTF is in-compatible with newer version
+due to major change API. And Vcpkg 
+[isn't work well](https://devblogs.microsoft.com/cppblog/take-control-of-your-vcpkg-dependencies-with-versioning-support/)
+with package version. Their document still many confuse so we will build Draco manually.
 
 ### Windows
 
-<TODO> the below is out of date
-
-Windows users may [download](https://cmake.org/download) CMake for Windows,
-install it and [run it](https://cmake.org/runningcmake/) on the FBX2glTF
-checkout (choose a build directory distinct from the source).
-
-As part of this process, you will be asked to choose which generator
-to use. **At present, only Visual Studio 2017 or 2019 is supported.** Older
-versions of the IDE are unlikely to successfully build the tool.
-
-Note that the `CMAKE_BUILD_TYPE` variable from the Unix Makefile system is
-entirely ignored here; it is when you open the generated solution that
-you will be choose one of the canonical build types — _Debug_,
-_Release_, _MinSizeRel_, and so on.
+- Install CMake
+- Install Visual Studio 2019 with C++ Desktop Development.
+- Install [FBX SDK](https://www.autodesk.com/developer-network/platform-technologies/fbx-sdk-2019-2)
+version 2019.2 from Autodesk website and set installation path.
+- Install open source package from [Vcpkg](https://github.com/microsoft/vcpkg): boost,
+nlohmann-json, cppcodec, stb, fmt, nlohmann-fifo-map.
+- Open prj folder, open FBX2glTF.sln.
+- Get source of [vectorial](https://github.com/scoopr/vectorial) go to `vectorial` -> `include` and copy path, 
+paste new include directory in `Properties window` -> `Configuration Properties` -> `C/C++` -> `General`
+-> `Additional Include Directories`
+- Get source of [Draco](https://github.com/google/draco) then create new folder `build`, go to folder
+then open command line `cmd`. Type `cmake .. -G "Visual Studio 16 2019 -A Win32"`. This will be
+generated Visual Studio Solution. Open `draco.sln` then choose build type (debug or release). Press build,
+wait util build completed. Go back to `draco` folder in Windows Explorer, open `Debug` or `Release` folder, copy path.
+paste new `.lib` folder in `Properties window` -> `Configuration Properties` -> `Linker` -> 
+`Additional Library Directories`.
+- Go back `FBX2glTF.sln` solution, choose `debug` or `release` build, press build.
 
 ## Conversion Process
 

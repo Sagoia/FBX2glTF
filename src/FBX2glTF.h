@@ -32,8 +32,8 @@
 #include "mathfu.hpp"
 
 // give all modules access to our tweaked JSON
-#include <fifo_map.hpp>
-#include <json.hpp>
+#include <nlohmann/fifo_map.hpp>
+#include <nlohmann/json.hpp>
 
 template <class K, class V, class ignore, class A>
 using workaround_fifo_map = nlohmann::fifo_map<K, V, nlohmann::fifo_map_compare<K>, A>;
