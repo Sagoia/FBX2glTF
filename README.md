@@ -126,18 +126,6 @@ Some of these switches are not obvious:
 
 ## Building it on your own
 
-We currently depend on the open source projects
-- [Boost](https://github.com/boostorg)
-- [Draco](https://github.com/google/draco)
-- [MathFu](https://github.com/google/mathfu)
-- [Json](https://github.com/nlohmann/json)
-- [cppcodec](https://github.com/tplgy/cppcodec)
-- [CLI11](https://github.com/CLIUtils/CLI11)
-- [stb](https://github.com/nothings/stb)
-- [fmt](https://github.com/fmtlib/fmt)
-- [fifo_map](https://github.com/nlohmann/fifo_map)
-- [vectorial](https://github.com/scoopr/vectorial)
-
 **At present, only version 2019.2 of the FBX SDK is just tested**
 We can't guarantee this will work well other version SDK
 
@@ -157,17 +145,18 @@ with package version. Their document still many confuse so we will build Draco m
 
 ### Windows
 
+All software should be install default `C:/Program Files` and `C:/Program Files(x86)`. If 
+you change any installation directory, you must be change directory in `setup-lib.bat`.
 - Install CMake
 - Install Visual Studio 2019 with C++ Desktop Development.
-- Install [FBX SDK](https://www.autodesk.com/developer-network/platform-technologies/fbx-sdk-2019-2)
-version 2019.2 from Autodesk website.
+- Install 7-Zip
 - Install [Vcpkg](https://github.com/microsoft/vcpkg), set system path and integrate 
 with Visual Studio
 - Open prj folder, open `FBX2glTF.sln`, choose `debug` or `release` build, choose `x86`
 processor (you can build `x64` by your own config). Edit `FBX SDK` include and lib path
 (if you change path)
-- Press build and wait. Some scripts will start automatically, it will be closed until 
-it finished.
+- Press `Build Solution` and wait. Some scripts will start automatically, it will be closed 
+until it finished.
 
 ## Conversion Process
 

@@ -55,14 +55,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Program Files\Autodesk\FBX\FBX SDK\2019.2\include;../src;../lib/mathfu/include;../lib/CLI11;../lib/vectorial/include;../lib/draco/src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../lib/fbxsdk/include;../src;../lib/mathfu/include;../lib/CLI11;../lib/vectorial/include;../lib/draco/src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4703</DisableSpecificWarnings>
       <LanguageStandard>stdcpp14</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Program Files\Autodesk\FBX\FBX SDK\2019.2\lib\vs2017\x86\debug;../lib/draco/build/Debug</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../lib/fbxsdk/lib/vs2017/x86/debug;../lib/draco/build/Debug</AdditionalLibraryDirectories>
       <AdditionalDependencies>libfbxsdk-md.lib;libxml2-md.lib;zlib-md.lib;Advapi32.lib;draco.lib;dracodec.lib;dracoenc.lib</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
@@ -79,7 +79,7 @@ call setup-lib.bat 2</Command>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Program Files\Autodesk\FBX\FBX SDK\2019.2\include;../src;../lib/mathfu/include;../lib/CLI11;../lib/vectorial/include;../lib/draco/src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../lib/fbxsdk/include;../src;../lib/mathfu/include;../lib/CLI11;../lib/vectorial/include;../lib/draco/src/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4703</DisableSpecificWarnings>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
@@ -88,7 +88,7 @@ call setup-lib.bat 2</Command>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Program Files\Autodesk\FBX\FBX SDK\2019.2\lib\vs2017\x86\release;../lib/draco/build/Release</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../lib/fbxsdk/lib/vs2017/x86/release;../lib/draco/build/Release</AdditionalLibraryDirectories>
       <AdditionalDependencies>libfbxsdk-md.lib;libxml2-md.lib;zlib-md.lib;Advapi32.lib;draco.lib;dracodec.lib;dracoenc.lib</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
