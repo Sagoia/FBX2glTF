@@ -23,7 +23,7 @@ Or perhaps, as part of a more complex pipeline:
           --output ~/models/target/butterfly.glb
 ```
 
-There are also some friendly & hands-on instructions available [over at Facebook](https://developers.facebook.com/docs/sharing/3d-posts/glb-tutorials/#convert-from-fbx).
+There are also some friendly & hands-on instructions available [over at Facebook](http://web.archive.org/web/20210120105308/https://developers.facebook.com/docs/sharing/3d-posts/glb-tutorials/).
 
 ### CLI Switches
 
@@ -160,10 +160,14 @@ with package version. Their document still many confuse so we will build Draco m
 - Install CMake
 - Install Visual Studio 2019 with C++ Desktop Development.
 - Install [FBX SDK](https://www.autodesk.com/developer-network/platform-technologies/fbx-sdk-2019-2)
-version 2019.2 from Autodesk website and set installation path.
-- Install open source package from [Vcpkg](https://github.com/microsoft/vcpkg).
-- Checkout all need submodule.
-- Open prj folder, open `FBX2glTF.sln`, choose `debug` or `release` build, press build.
+version 2019.2 from Autodesk website.
+- Install [Vcpkg](https://github.com/microsoft/vcpkg), set system path and integrate 
+with Visual Studio
+- Open prj folder, open `FBX2glTF.sln`, choose `debug` or `release` build, choose `x86`
+processor (you can build `x64` by your own config). Edit `FBX SDK` include and lib path
+(if you change path)
+- Press build and wait. Some scripts will start automatically, it will be closed until 
+it finished.
 
 ## Conversion Process
 
